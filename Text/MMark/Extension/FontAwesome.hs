@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.FontAwesome
 -- Copyright   :  © 2017–present Mark Karpov

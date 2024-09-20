@@ -1,36 +1,9 @@
-cabal-version:   2.4
 name:            mmark-ext
 version:         0.2.1.5
-license:         BSD-3-Clause
-license-file:    LICENSE.md
-maintainer:      Mark Karpov <markkarpov92@gmail.com>
-author:          Mark Karpov <markkarpov92@gmail.com>
-tested-with:     ghc ==9.4.7 ghc ==9.6.3 ghc ==9.8.1
-homepage:        https://github.com/mmark-md/mmark-ext
-bug-reports:     https://github.com/mmark-md/mmark-ext/issues
-synopsis:        Commonly useful extensions for the MMark markdown processor
-description:
-    Commonly useful extensions for the MMark markdown processor. Click on
-    "Text.MMark.Extension.Common" to get started.
+cabal-version:   >= 1.8
 
 category:        Text
 build-type:      Simple
-data-files:
-    data/*.md
-    data/*.html
-
-extra-doc-files:
-    CHANGELOG.md
-    README.md
-
-source-repository head
-    type:     git
-    location: https://github.com/mmark-md/mmark-ext.git
-
-flag dev
-    description: Turn on development settings.
-    default:     False
-    manual:      True
 
 library
     exposed-modules:
@@ -47,58 +20,14 @@ library
         Text.MMark.Extension.Skylighting
         Text.MMark.Extension.TableOfContents
 
-    default-language: GHC2021
     build-depends:
-        base >=4.15 && <5,
-        foldl >=1.2 && <1.5,
-        ghc-syntax-highlighter >=0.0.1 && <0.1,
-        lucid >=2.9.13 && <3,
-        microlens >=0.4 && <0.5,
-        mmark >=0.0.4 && <=0.1,
-        modern-uri >=0.3.4.4 && <0.4,
-        skylighting >=0.7.6 && <0.15,
-        text >=0.2 && <2.2
+        base
+      , foldl
+      , ghc-syntax-highlighter
+      , lucid
+      , microlens
+      , mmark
+      , modern-uri
+      , skylighting
+      , text
 
-    if flag(dev)
-        ghc-options:
-            -Wall -Werror -Wredundant-constraints -Wpartial-fields
-            -Wunused-packages
-
-    else
-        ghc-options: -O2 -Wall
-
-test-suite tests
-    type:               exitcode-stdio-1.0
-    main-is:            Spec.hs
-    build-tool-depends: hspec-discover:hspec-discover >=2.0 && <3.0
-    hs-source-dirs:     tests
-    other-modules:
-        Text.MMark.Extension.CommentSpec
-        Text.MMark.Extension.FontAwesomeSpec
-        Text.MMark.Extension.FootnotesSpec
-        Text.MMark.Extension.GhcSyntaxHighlighterSpec
-        Text.MMark.Extension.KbdSpec
-        Text.MMark.Extension.LinkTargetSpec
-        Text.MMark.Extension.MathJaxSpec
-        Text.MMark.Extension.ObfuscateEmailSpec
-        Text.MMark.Extension.PunctuationPrettifierSpec
-        Text.MMark.Extension.SkylightingSpec
-        Text.MMark.Extension.TableOfContentsSpec
-        Text.MMark.Extension.TestUtils
-
-    default-language:   GHC2021
-    build-depends:
-        base >=4.15 && <5,
-        hspec >=2 && <3,
-        lucid >=2.9.13 && <3,
-        mmark >=0.0.4 && <=0.1,
-        mmark-ext,
-        text >=0.2 && <2.2
-
-    if flag(dev)
-        ghc-options:
-            -Wall -Werror -Wredundant-constraints -Wpartial-fields
-            -Wunused-packages
-
-    else
-        ghc-options: -O2 -Wall

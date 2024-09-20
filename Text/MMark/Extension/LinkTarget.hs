@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TupleSections #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.LinkTarget
 -- Copyright   :  © 2018–present Mark Karpov

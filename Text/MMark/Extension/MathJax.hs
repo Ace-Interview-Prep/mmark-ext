@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.MathJax
 -- Copyright   :  © 2018–present Mark Karpov

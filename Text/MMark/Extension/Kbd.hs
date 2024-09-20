@@ -1,5 +1,5 @@
 {-# LANGUAGE QuasiQuotes #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.Kbd
 -- Copyright   :  © 2018–present Mark Karpov

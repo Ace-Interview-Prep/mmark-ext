@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.Footnotes
 -- Copyright   :  © 2018–present Mark Karpov

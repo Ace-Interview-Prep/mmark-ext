@@ -1,3 +1,4 @@
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.Comment
 -- Copyright   :  © 2018–present Mark Karpov

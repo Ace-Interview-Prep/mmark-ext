@@ -1,5 +1,5 @@
 {-# LANGUAGE LambdaCase #-}
-
+{-# LANGUAGE ImportQualifiedPost #-}
 -- |
 -- Module      :  Text.MMark.Extension.TableOfContents
 -- Copyright   :  © 2017–present Mark Karpov
